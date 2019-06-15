@@ -1,0 +1,244 @@
+
+History of Regshot
+
+Download latest version at:
+http://sourceforge.net/projects/regshot/
+
+-------------------------------------------------
+*: Note you may interest
+!: Changes made
++: Function added
+-: Function deleted
+-------------------------------------------------
+
+V1.9.0 2013-02-02
+! Testing purpose only (there may be some bugs left in it due to Unicode and x64 changes)
++ Add 64-Bit builds
++ Add Unicode builds with .hivu files (not compatible with ANSI .hiv files)
++ Structure of hive files enhanced, while keeping backwards compatibility for ANSI builds
++ Skip list checks now also against the single key/value/file name additionally to checking the complete path
++ Add a proper manifest file to enable UAC elevation
++ Symbol files released for all builds
+! Add support for various compilers
+! Various code cleanups
+* New program icon (thanks to the PortableApps guys)
+* All Regshot versions can be build via WDK
+
+V1.8.2 2007-11-03
+! Change some calls to ANSI version (lstrcmp->strcmp...)
+! Use risk . and .. compare
+! Use HeapAlloc instead of GlobalAlloc, danger but slightly faster, see source code
+! Html differ color from e0e0e0 to e0f0e0 [Thanks Charles!]
++ Add French language fixed, Kazakh language.
++ Add new style browse for folder by Belogorokhov Youri! (NT+)
++ Do not save setting to regshot.ini when there is no such ini file
+ (idea from "alan borer" in my msg board)
++ Fix crash bug in former version if start from cmd window
+! Minor changes and minor bug fixed
+
+V1.8.1 2007-06-20
+! Fix a Crash bug in 1.8.0! (LoadHive()->ReadFile())
++ Dir chains comparison is more human.
++ "UseLongRegHead" option added in regshot.ini to compatible with undoReg (1.46)
+* "UseLongRegHead=1" means using "HKEY_LOCAL_MACHINE" instead of "HKLM", default 0
+* Do not compare shots saved with different "UseLongRegHead" option!
+
+V1.8.0 2007-06-15 (Its TiANWEi reloaded)
+! Fix file chain break bug in 1.7
+! Fix several pointer mis-point (lpComputer, etc)
+! Code maintenance (split, rename, OMG)
+! File attribute dir code adjust
+! Value mode section of html output is colored [Thanks HANDLE!]
++ Fileshots are now saved in hive (you must be waiting for this ^_^)
++ Use GPLv2 license
+
+V1.7, 1.7.1, and 1.7.2 2004-02-25 until 2004-03-05 This version is made by tulipfan[CCG]!
+* Minimize file size from 44k to 28k, thanks to y0da
+! When shot file, "."&".." not show
+* Instead of using "rgst152.dat", the config moved to "regshot.ini"
++ Skip List function is added both for reg and file's shot
++ 1.7.1 add 2 languages
++ 1.7.2 fix language codepage bug thanks Bata György!
+
+V1.61a,b,c,d,e,e+,e1-e5 2002-07-13 until 2003-01-01
++ Add 2 languages[1 in 1.61b], Fixed 1.
+! SeparatorBar misplaced in Popup menu in some OS,
+  Hope to fix it! [Thanks Dchenka]
+! Fix Output path bug found by itschy!
++ Add Japanese language by Kentaro Okude!
++ Add Polish language by Adam Mikusiñski!
++ Add Serbian language by Wiz from Yugoslavia!1.61e1
++ Add Hebrew language by Jack Gorji! 1.61e1
++ Add Galego language by Xos?Antón Vicente Rodríguez [e2]
++ Add Hrvatski language by Obelix[[e3]
++ Add Bulgarian language by Alex Simidchiev[e4]
++ Add Svenska language by joup@algonet.se[e5]
+
+V1.61 2002-03-30
++ Clear shots separately
++ Show translators name in About Dialog
++ Add Nederlands, Türkçe, Èesky language support
+! Optimize some codes
+
+V1.60[test] 2002-03-25
++ Snapshots can be saved into "Hive" files
+
+V1.55 2002-03-11
+- Cut off "Dynamic Monitor" Function
++ Compare log file are saved with the name of the
+  comment you input!
+
+V1.54b 2002-02-28
+! Fix bug that "rgst152.dat" was misplaced.
++ Add Deutsch language support.
+
+V1.54a 2002-02-22
+! Fix bug that made in 1.54 [Cannot save mask in
+  Monitor window]
++ Minor changes, add Italian language strings.
+* Some friends reported that Monitor Window may hang
+  up, but I have not encounter it myself, I will
+  debug later.
+
+V1.54 2002-01-27
++ Multi Language interface and inner strings
+
+V1.53 2001-12-16
++ Show progress during compare
+! New counter refresh method
+! URL change to regshot.yeah.net
+
+V1.52c 2001-12-10
++ Browse button in static window
+
+V1.52b 2001-11-18
++ Pause "||" added in dynamic window
++ Save function added in dynamic window
+
+V1.52a 2001-11-16
++ Output-path in static window
++ Ring3TD name catch and filter in dynamic window
+
+V1.52 2001-11-10
++ Dynamic monitor window under Win9x
+  read readme.txt for detail!
+! rgst150a.dat -> rgst152.dat
+
+V1.51, 1.51a 2001-10-25
+! Fix crash bug in 1.50e when scan folders!!
++ Scan unlimited number of drivers [folders]
+
+V1.50e 2001-10-18
++ Scan up to 26 drivers[folders] separated with ";"
+- Text log don't wrap at too long data for the
+  3rd party software analysis
+
+V1.50d 2001-09-29
+! Deal with more non-standard(invalid) reg values
+
+V1.50c 2001-09-28
+! Crash bug fixed when grab some non-standard value
+* Thanks firstk@21cn.com for testing debug version!
+
+V1.50b 2001-09-22
+! NULL folder name minor bug fixed
+
+V1.50a 2001-09-10
+* Teachers Day!
++ Files and folders scan! [maybe whole partition!]
+! log filename fixed
+! regshot.dat -> rgst150.dat
+
+V1.40c 2001-09-05
++ Comments field for compare log
+! Due to HTML viewer's limit, some change made
+
+V1.40b 2001-09-04
++ Show keys and values counts during registry grab
++ Show elapse time during registry grab
++ Refresh dialog box during registry grab
++ Show icon on sysmenu
+! New string api
+! Minor changes on memory allocation
+
+V1.40a 2001-09-01
+* This is a brand-new version!
+! New data structure, more detailed output.
++ HTML document compare log output.
+- Some checkbox.
+
+-------------------------------------------------
+
+Version 1.30c 2001-08-2?
+! Getsystime -> Getlocaltime
+! H.L.K -> H.M
+! Little changes
+
+Version 1.30b 2001-08-13
+- Some ASM code
+- Some exception handler
+- Some old function
+* Great Thanks to Mr.Zhangl!!!
+
+Debug Version 1.20b 2001-08-10
+* This is a debug version to Mr. ZhangL
+
+Debug Version 1.20a 2001-08-09
+* This is a debug version to Mr. ZhangL
+! Pointers unclear bug fixed
+! Dbytes bug fixed
+
+Debug Version 1.2  2001-08-08
+* This is a debug version to Mr. ZhangL
++ New debuglog output
+
+Debug Version 1.1  2001-08-07
+* This is a debug version to Mr. ZhangL
++ New debuglog "debug_keyqueryinfo.log" output
+
+Debug Version 1.0 2001-08-07
+* This is a debug version to Mr. ZhangL
+* Four month apart from my cute Regshot!
++ debug_keyopen.log
+  debug_keyclose.log
+  debug_keyqueryinfo.log
+  debug_keycannotbeopen.log
+* My PC has no Win2000 installed, so I email this
+  version to Zhangl, and he email me the logfile!
+
+Version 1.10 2001-04-09
+* One and a half year apart from my Regshot!
+! Fixed bugs on NT4
+
+Version 1.01j 1999-12-29
+- NT4 bug cannot be found?? So sad!
+- Not packed with UPX any more
+
+Version 1.01i 1999-12-04
++ Compare log save to different files, max 10000!
++ Turtor file (turtor.txt) added in release pack.
+* Found bugs on NT, bug I cannot fix it
+
+Version 1.01h 1999-11-25
+! Found bugs on NT sp3
+
+Version 1.01g 1999-10
+! Windows version detection error fixed.
++ Exterviewer edit box.
+
+Version 1.01f 1999-10
+! New method of compare
++ ASM codes
++ Notpad.exe called to show the log
++ New Icon.
+- Bmp logo.
+
+Version 1.01e
+* Mostly like 1.01d, bugs fixed.
+
+Version 1.01d
+! Use direct "=" instead "lstrcat()", faster!
+! Larger listBox
+
+Version before 1.01c
+* I don't remember so much!:))
